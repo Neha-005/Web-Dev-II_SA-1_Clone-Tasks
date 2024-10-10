@@ -1,0 +1,46 @@
+/* Styling Movie image gallery */
+* {
+    margin: 0; /* Removing default margin */
+    padding: 0; /* Removing default padding */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height. */
+}
+
+/* Body styling */
+body {
+    font-family: 'Pacifico', cursive; /* Using font for text */
+    background-color: #000000; /*Background colour for body */
+    color: #333; /* Dark grey text colour */
+    padding: 20px; /* Add padding around the body */
+}
+
+/* Styling the header */
+header {
+    text-align: center; /* Center the header text */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+/* Styling the header title */
+header h1 {
+    font-size: 2.5em; /* font size for the title */
+    color: #ffffff; /*color for the title */
+}
+
+/* Styles for the gallery section */
+.gallery {
+    display: grid; /* Using CSS grid layout */
+    grid-template-columns: repeat(4, 1fr); /* Setting up four equal columns in the grid */
+}
+
+/* Styles for each gallery item */
+.gallery-item {
+    overflow: hidden; /* Hide any content that goes outside the box */
+}
+
+/* Styles for images within gallery items */
+.gallery-item img {
+    width: 100%; /* Full width of the item */
+    max-width: 500px; /* Setting a maximum width for images */
+    height: auto; /* Maintain aspect ratio of images */
+    display: block; /* Ensuring the image is treated as a block-level element */
+    margin: 0; /* Remove margin to eliminate space */
+}
