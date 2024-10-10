@@ -1,0 +1,162 @@
+/* Styling portfolio home page */
+
+* {
+    margin: 0; /* Removes default margin  */
+    padding: 0; /* Removes default padding  */
+    box-sizing: border-box; /* Makes the width and height of elements include their padding and border */
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif; /* font style */
+    background-color: #f4f4f4; /* Light background colour */
+    color: #00042c; /*  text color */
+}
+
+/* Header styling */
+header {
+    display: flex; /* Using flexbox for layout */
+    justify-content: space-between; /* Space items apart */
+    align-items: center; /* Aligning items vertically */
+    padding: 20px 40px; /* Padding for spacing */
+    background-color: #00002b; /* dark blue background */
+    color: #ffffff; /* Light color text*/
+}
+
+/* Logo styling */
+header .logo h1 {
+    font-size: 26px; /* Font size for the logo title */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+/* Navigation styling */
+nav ul {
+    display: flex; /* Using flexbox for layout */
+    list-style: none; /* Removing the bullet points */
+}
+
+/* Navigation item styling */
+nav ul li {
+    margin-left: 20px; /* Space between navigation items */
+}
+
+/* Navigation link styling */
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    font-size: 16px; /* Font size for links */
+    color: #b9bdf8; /* Light blue colour for links */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    color: #fcfcfc; /* white color when hovering */
+}
+
+/* Main section styling */
+.main {
+    text-align: center; /* Center text */
+    padding: 100px 20px; /* Padding for spacing */
+    background: url('https://img.pikbest.com/wp/202346/iridescent-abstract-art-fashion-background-featuring-blue-cloth-and-holographic-foil-in-3d-render_9635622.jpg!w700wp') no-repeat center center/cover; /* Background image */
+    color: #ffffff; /* Light text colour*/
+}
+
+/* Main section heading styling */
+.main h2 {
+    font-size: 50px; /* Font size for the heading */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+/* Main section paragraph styling */
+.main p {
+    font-size: 18px; /* Font size for the paragraph */
+    margin-bottom: 40px; /* Space below paragraph */
+}
+
+/* Button styling */
+.btn {
+    text-decoration: none; /* Remove underline from button */
+    padding: 10px 30px; /* Padding for button */
+    background-color: #010033; /* button background colour */
+    color: #fff; /* Button text color */
+    font-size: 16px; /* Font size for button */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+/* Hover effect for button */
+.btn:hover {
+    background-color: #0300a5; /* light colour when hovering */
+}
+
+/* Portfolio section styling */
+.portfolio {
+    padding: 50px; /* Padding for the section */
+    text-align: center; /* Center text */
+}
+
+/* Portfolio section heading styling */
+.portfolio h2 {
+    font-size: 36px; /* Font size for the heading */
+    margin-bottom: 40px; /* Space below heading */
+}
+
+/* Portfolio grid styling */
+.portfolio-grid {
+    display: grid; /* Using grid layout */
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 20px; /* Space between items */
+}
+
+/* Individual portfolio item styling */
+.portfolio-item {
+    background-color: #fff; /* colour background */
+    border-radius: 10px; /* Rounded corners */
+    border: 2px solid #001f3f; /* Dark blue outline */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    overflow: hidden; /* Hide any content that goes outside the box */
+    transition: transform 0.3s; /* Smooth transform transition */
+}
+
+/* Hover effect for portfolio items */
+.portfolio-item:hover {
+    transform: translateY(-10px); /* Subtle lift effect */
+}
+
+/* Image styling in portfolio items */
+.portfolio-item img {
+    width: 100%; /* Full width for images */
+    height: auto; /* Auto height for images */
+}
+
+/* Title styling for portfolio items */
+.portfolio-item h3 {
+    font-size: 18px; /* Font size for titles */
+    padding: 15px; /* Padding for title */
+}
+
+/* Footer styling */
+footer {
+    text-align: center; /* Center text */
+    padding: 20px; /* Padding for spacing */
+    background-color: #00002b; /*background colour footer */
+    color: #fff; /* White text  */
+}
+
+/* Social icons styling */
+footer .social-icons {
+    margin: 20px 0; /* Space above and below social icons */
+}
+
+/* Social media link styling */
+footer .social-icons a {
+    margin: 0 10px; /* Space between icons */
+    color: #fff; /* Icon color */
+    font-size: 24px; /* Icon size */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+/* Hover effect for social media icons */
+footer .social-icons a:hover {
+    color: #b9bdf8; /* Changes color when hovering */
+}
