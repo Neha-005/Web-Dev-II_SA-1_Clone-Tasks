@@ -1,0 +1,280 @@
+/* Styling the home page of Weston's Chocolate Box. */
+* {
+    margin: 0; /* Removing default margin */
+    padding: 0; /* Removing default padding */
+    box-sizing: border-box; /* Ensure padding and borders are included in total element size */
+}
+
+/* Body Styling */
+body {
+    font-family: 'Merriweather', serif; /* setting the font to Merriweather*/
+    background-color: #1f0000f6; /* background colour */
+    color: #ffc813; /* text colour */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #140000; /* Dark background for the navbar */
+    padding: 1rem; /* Space inside navbar */
+    display: flex; /* Applying flexbox layout for the navigation bar */
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Center items vertically */
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 2rem; /* Logo font size */
+    font-weight: bold; /* Bold text for logo */
+    color: #d1a821; /* color for logo */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none; /* Removes bullet points */
+    display: flex; /* Display links horizontally */
+}
+
+.nav-links li {
+    margin-left: 2rem; /* Space between each link */
+}
+
+.nav-links a {
+    text-decoration: none; /* Removing underline from links */
+    color: #cfa722; /* color for links */
+    font-size: 1.2rem; /* font size for links */
+}
+
+/* Main Section */
+.main {
+    background-image: url('https://t4.ftcdn.net/jpg/06/62/13/37/360_F_662133768_vJ1qONHglFXcR8uuNR2CRiTIOR8gdQpw.jpg'); /* Background image */
+    background-size: cover; /* Covering the entire section */
+    background-position: center; /* Center the background image */
+    padding: 12rem 2rem; /* Large padding for height */
+    text-align: center; /* Centered text in hero */
+}
+
+.main h1 {
+    font-size: 3rem; /* text size main heading */
+    -webkit-text-stroke: 1px black; /* Black stroke around text */
+}
+
+.main p {
+    font-size: 1.5rem; /* Subtitle size */
+}
+
+/* Section Styling */
+section {
+    padding: 3rem 2rem; /* Setting 3rem vertically and 2rem horizontally */
+    text-align: center; /* Centered text */
+}
+
+h2 {
+    font-size: 2.5rem; /* Subheading text size */
+    margin-bottom: 1rem; /* Space below subheading */
+    color: #d4af37; /* color for headings */
+}
+
+p {
+    font-size: 1.2rem; /* Paragraph text size */
+    color: #fff; /* colour text  */
+}
+
+
+/* Button Styling */
+.customize-button, .product-button, .contact-button {
+    display: inline-block; /* aligns element next to others with width and height */
+    padding: 0.75rem 1.5rem; /* adding vertical and horizontal space inside the element */
+    background-color: #d1a821; /* button color */
+    color: #140000; /* text color */
+    text-decoration: none; /* removes underline */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 1.2rem; /* Font size */
+    margin-top: 1rem; /* Space above buttons */
+    transition: background-color 0.3s ease; /* color transition */
+}
+
+/* Hover effect for buttons */
+.customize-button:hover, .product-button:hover, .contact-button:hover {
+    background-color: #7a5a08; /* Darker colour on hover */
+}
+
+/* Product Section */
+.products {
+    text-align: center; /* Center-align the text and images */
+}
+
+.product-list {
+    display: flex; /* align items horizontally / using flex layout */
+    flex-wrap: wrap; /* allow items to wrap to the next line */
+    justify-content: space-around; /* space items evenly */
+}
+
+.product-item {
+    margin: 20px; /* Adding space around each product item */
+}
+
+.products img {
+    width: 200px; /* Setting image width */
+    height: auto; /* Maintaining aspect ratio */
+    margin: 1rem; /* Space around images */
+    border-radius: 10px; /* Rounded corners for images */
+    transition: transform 0.2s; /* Transition effect for images */
+    outline: 2px solid #d1a821; /* Outline color */
+}
+
+/* Image Hover Effect */
+.products img:hover {
+    transform: scale(1.1); /* Slightly larger on hover */
+}
+
+/* Product Name Styling */
+.product-item p {
+    font-size: 1.1rem; /*  font size */
+    margin-top: 10px; /* space between image and name */
+    color: #ffd900; /* text color */
+}
+
+/* Contact Us Styling */
+.contact {
+    background-image: url('https://media.istockphoto.com/id/168413702/photo/luxury-milk-and-dark-chocolate-truffles.jpg?s=612x612&w=0&k=20&c=zjUmD4DJcb2W5NqXKVhtRO_V1i3gW_Tlp1TY-Nu2YmA='); /* Background image  */
+    background-size: cover; /* Make the image cover the entire section */ 
+}
+
+form {
+    display: flex; /* Apply flexbox to the form */
+    flex-direction: column; /* Column layout for form elements */
+    gap: 1rem; /* Space between form elements */
+    max-width: 400px; /* Maximum width for the form */
+    margin: 0 auto; /* Center the form */
+    background-color: rgba(20, 0, 0, 0.7); /* Dark, slightly transparent background for the form */
+    padding: 20px; /* Space inside the form for better layout */
+    border-radius: 5px; /* Rounded corners for the form */
+}
+
+input, textarea {
+    padding: 0.75rem; /* Inner space for inputs */
+    border: 1px solid #d1a821; /* Border color for inputs */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size for inputs */
+    background-color: #140000; /* Background color for inputs */
+    color: #d1a821; /* Text color */
+}
+
+/* Submit Button for Contact Form */
+.contact-button {
+    background-color: #d1a821; /* Color for button */
+    color: #140000; /* Text color */
+    padding: 10px; /* Inner space for the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners for button */
+    font-size: 1rem; /* Font size for button text */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.contact-button:hover {
+    background-color: #c78800; /* Lighter shade for button on hover */
+}
+
+
+/* Styling the unordered list for contact details */
+.company-contact ul {
+    list-style: none; /* Removing bullet points from the list */
+    padding-left: 0; /* Removing any default left padding from the list */
+}
+
+/* Styling each list item inside the contact details section */
+.company-contact li {
+    font-size: 1.2rem; /* font size  */
+    margin-bottom: 0.5rem; /* Adds space between each list item for better spacing */
+}
+
+/* Styling for links (a) inside the contact details section */
+.company-contact a {
+    color: #e4b210; /*  link color  */
+    text-decoration: none; /* Removes the underline from the links */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #140000; /* Dark background for footer */
+    text-align: center; /* Center text in footer */
+    padding: 1rem; /* Padding in footer */
+    position: relative; /* Position relative for footer */
+}
+
+footer p {
+    color: #d1a821; /* text color for footer */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column; /* stacking items vertically */
+        align-items: flex-start; /* aligning items to the left */
+    }
+
+    .nav-links {
+        flex-direction: column; /* stacking navigation links */
+        margin-top: 1rem; /* Space above navigation links */
+    }
+
+    .nav-links li {
+        margin-left: 0; /* No left margin */
+        margin-bottom: 1rem; /* Space below each link */
+    }
+
+    .main {
+        padding: 8rem 1rem; /* Reduced padding for smaller screens */
+    }
+
+    .main h1 {
+        font-size: 2.5rem; /* Smaller heading size */
+    }
+
+    .main p {
+        font-size: 1.2rem; /* Smaller subtitle size */
+    }
+
+    section {
+        padding: 2rem 1rem; /* Reduced padding for sections */
+    }
+
+    h2 {
+        font-size: 2rem; /* Smaller subheading size */
+    }
+
+    p {
+        font-size: 1rem; /* Smaller paragraph size */
+    }
+
+    .customize-button, .product-button, .contact-button {
+        padding: 0.5rem 1rem; /* Smaller button size */
+        font-size: 1rem; /* Smaller font size */
+    }
+
+    .products img {
+        width: 100%; /* Full width images on mobile */
+        max-width: 200px; /* Maximum width for images */
+    }
+
+    .product-item {
+        flex: 1 1 100%; /* Full width items on mobile */
+        margin: 10px 0; /* Space above and below */
+    }
+
+    form {
+        padding: 1rem; /* Reduced padding for form */
+    }
+
+    input, textarea {
+        font-size: 0.9rem; /* Smaller input size */
+    }
+
+    .company-contact li {
+        font-size: 1rem; /* Smaller contact item size */
+    }
+
+    footer {
+        padding: 0.5rem; /* Reduced padding in footer */
+    }
+}

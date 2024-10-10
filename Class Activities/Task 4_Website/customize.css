@@ -1,0 +1,165 @@
+/* Styling the customizing page of Weston's Chocolate Box. */
+* {
+    margin: 0; /* Removing default margin */
+    padding: 0; /* Removing default padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Body Styling */
+body {
+    font-family: 'Merriweather', serif; /* setting the font to Merriweather */
+    color: #e4b210; /* text colour */
+    background-image: url('https://img.freepik.com/premium-photo/assorted-luxury-chocolate-with-gold-foil-rose-petals_1061358-82652.jpg'); /* Background image */
+    background-size: cover; /* Covering the entire section with the background image */
+    background-position: center; /* Center the background image */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #140000; /* background colour for nav bar */
+    padding: 1rem; /* Padding around the navigation items */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out logo and navigation links */
+    align-items: center; /* Center items vertically */
+}
+
+.logo {
+    font-size: 2rem; /* font size of the logo */
+    font-weight: bold; /* Bold font weight for emphasis */
+    color: #d1a821; /* text colour for logo */
+}
+
+.nav-links {
+    list-style: none; /* Removing bullet points from list */
+    display: flex; /* Displaying links in a row */
+}
+
+.nav-links li {
+    margin-left: 2rem; /* Space between navigation links */
+}
+
+.nav-links a {
+    text-decoration: none; /* Removes underline from links */
+    color: #cfa722; /* text colour of navigation links */
+    font-size: 1.2rem; /* Font size for navigation links */
+}
+
+/* Build Your Box Section */
+.build-box {
+    max-width: 800px; /* Limit the maximum width of the box section */
+    margin: 50px auto; /* Center the section with margin */
+    padding: 20px; /* Padding inside the box section */
+    background-color: #140000; /* Dark background for the box section */
+    border-radius: 10px; /* Rounded corners for the box section */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow for depth effect */
+    color: #e4b210; /* text color*/
+}
+
+.build-box h1 {
+    text-align: center; /* Center the main heading */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #d1a821; /* color for the heading */
+    font-size: 2rem; /*  font size for the heading */
+}
+
+.selection-group {
+    margin: 20px 0; /* Space above and below each selection group */
+}
+
+.selection-group h2 {
+    margin-bottom: 10px; /* Space below subheadings */
+    color: #e4b210; /* color for subheadings */
+    font-size: 1.4rem; /* Font size for subheadings */
+}
+
+.selection-group label {
+    display: block; /* Each label takes a full line */
+    margin: 10px 0; /* Space above and below labels */
+    color: #fff; /* color for label text */
+}
+
+/* Styling for checkboxes and radio buttons */
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 10px; /* Space to the right of the input */
+}
+
+/* styling dropdown for Occasions */
+select {
+    width: 100%; /* Full width for dropdown */
+    padding: 10px; /* Padding inside dropdown */
+    background-color: #fdda68; /*  background for dropdown */
+    border: none; /* No border for dropdown */
+    border-radius: 5px; /* Rounded corners for dropdown */
+    color: #140000; /* Dark text color for dropdown */
+    font-size: 1.1rem; /* Font size for dropdown options */
+}
+
+/* Styling submit button */
+.submit-button {
+    width: 100%; /* Full width for the button */
+    padding: 12px; /* Padding inside the button */
+    background-color: #d1a821; /* background color for button */
+    color: #140000; /* Dark text color for button */
+    border: none; /* No border for button */
+    border-radius: 5px; /* Rounded corners for button */
+    font-size: 16px; /* Font size for button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    margin-top: 20px; /* Space above the button */
+}
+
+.submit-button:hover {
+    background-color: #e4b210; /* Change background color on hover */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #140000; /* Dark background for footer */
+    text-align: center; /* Center text in footer */
+    padding: 1rem; /* Padding in footer */
+    position: relative; /* Relative positioning for footer */
+}
+
+footer p {
+    color: #d1a821; /* text color for footer */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column; /* stacking items vertically */
+        align-items: flex-start; /* aligning items to the left */
+    }
+
+    .nav-links {
+        flex-direction: column; /* stacking navigation links */
+        margin-top: 1rem; /* Space above navigation links */
+    }
+
+    .nav-links li {
+        margin-left: 0; /* No left margin */
+        margin-bottom: 1rem; /* Space below each link */
+    }
+    .build-box {
+        margin: 20px; /* Reduce margin for smaller screens */
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .build-box h1 {
+        font-size: 1.8rem; /* Smaller font size for heading */
+    }
+
+    .selection-group h2 {
+        font-size: 1.2rem; /* Smaller font size for subheadings */
+    }
+
+    .selection-group label,
+    .selection-group p {
+        font-size: 1rem; /* Adjusting font size for labels and paragraphs */
+    }
+
+    .submit-button {
+        font-size: 14px; /* Smaller font size for buttons */
+    }
+}

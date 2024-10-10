@@ -1,0 +1,131 @@
+/* Styling the sign in / sign up page of Weston's Chocolate Box. */
+* {
+    margin: 0; /* Removing default margin */
+    padding: 0; /* Removing default padding */
+    box-sizing: border-box; /* Ensure padding and borders are included in total element size */
+}
+
+/* Body Styling */
+body {
+    font-family: 'Merriweather', serif; /* setting the font to Merriweather */
+    background-color: #1f0000f6; /* background colour */
+    color: #e4b210; /* text colour */
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20240411/pngtree-luxury-chocolate-candies-image_15657809.jpg'); /* Add your background image URL */
+    background-size: cover; /* Cover the entire background */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #140000; /* Dark background for the navbar */
+    display: flex; /* Applying flexbox layout for the navigation bar */
+    justify-content: space-between; /* Space between logo and links */
+    padding: 1rem; /* Space inside navbar */
+    align-items: center; /* Center items vertically */
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 2rem; /* Logo font size */
+    font-weight: bold; /* Bold text for logo */
+    color: #d1a821; /* color for logo */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none; /* Removes bullet points */
+    display: flex; /* Display links horizontally */
+}
+
+.nav-links li {
+    margin-left: 2rem; /* Space between each link */
+}
+
+.nav-links a {
+    text-decoration: none; /* Removing underline from links */
+    color: #cfa722; /* color for links */
+    font-size: 1.2rem; /* font size for links */
+}
+
+/* Sign Up Section */
+.signup {
+    background-color: rgba(20, 0, 0, 0.7); /* Dark, slightly transparent background for the form */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Subtle shadow to lift the form off the background */
+    text-align: center; /* Center text inside the form */
+    max-width: 400px; /* Setting the maximum width of the sign-up form */
+    margin: 100px auto; /* Center the form vertically with margin at the top and bottom */
+    padding: 20px; /* Adding space inside the form for better layout */
+}
+
+.signup h1 {
+    margin-bottom: 20px; /* Space below the heading */
+    color: #e4b210; /* color for the heading  */
+}
+
+.signup label {
+    display: block; /* Display labels as block elements to stack them */
+    margin: 10px 0 5px; /* Space around labels */
+}
+
+.signup input {
+    padding: 10px; /* Space inside input fields  */
+    margin-bottom: 15px; /* space below each input field */
+    width: 100%; /* full width for input fields  */
+    border: 1px solid #ccc; /* colour border around input fields */
+    border-radius: 5px; /* rounded corners for input fields */
+}
+
+.signup-button {
+    font-size: 16px; /* font size for the button text */
+    width: 100%; /* full width for the sign-up button */
+    color: white; /* text color  */
+    border: none; /* remove default button border */
+    border-radius: 5px; /* Rounded corners for the button */
+    padding: 10px; /* space inside the button  */
+    background-color: #835a03; /* color for the button */
+}
+
+.signup-button:hover {
+    background-color: #c78800; /* Lighter shade for the button on hover  */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #140000; /* dark background for footer */
+    text-align: center; /* center text in footer */
+    padding: 1rem; /* padding in footer */
+    position: relative; /* position relative for footer */
+}
+
+footer p {
+    color: #d1a821; /* text color for footer */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .signup {
+        width: 90%; /* Adjusting width for smaller screens */
+        margin: 50px auto; /* Less margin on smaller screens */
+        padding: 15px; /* Adjust padding */
+    }
+
+    nav {
+        flex-direction: column; /* Stacking navigation items */
+        align-items: flex-start; /* Aligning items to the start */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stacking links vertically */
+        width: 100%; /* Full width for links */
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0; /* space between stacked links */
+    }
+}
+
+@media (min-width: 769px) {
+    .signup {
+        max-width: 400px; /* setting maximum width for larger screens */
+    }
+}

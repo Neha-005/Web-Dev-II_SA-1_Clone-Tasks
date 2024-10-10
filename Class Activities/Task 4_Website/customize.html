@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Your Box</title><!--Name of the document-->
+    <link rel="stylesheet" href="customize.css"><!--CSS file link-->
+</head>
+<body>
+    <!-- Header section with navigation bar -->
+    <header>
+        <nav>
+            <div class="logo">Weston's Chocolate Box</div> <!-- Logo -->
+            <ul class="nav-links"> <!-- Navigation links -->
+                <li><a href="index.html">Home</a></li> <!-- Link to Home Page -->
+                <li><a href="customize.html">Build Your Box</a></li> <!-- Link to Customize Page -->
+                <li><a href="#products">Products</a></li> <!-- Link to Products Page -->
+                <li><a href="sign.html">Sign Up</a></li> <!-- Link to Sign Up Page -->
+                <li><a href="#">View Basket</a></li> <!-- Link to View Basket Page -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="build-box">
+            <h1>Build Your Own Chocolate Box</h1> <!-- Main heading for the section -->
+            <p>Follow the steps below to create your perfect chocolate box! Choose your favorite chocolate types, toppings, and fillings, then select the size and occasion. When you're ready, click "Build My Box" to finalize your choices.</p>
+
+            <!-- Step 1: Choose Chocolate Type -->
+            <div class="selection-group">
+                <h2>Step 1: Choose Your Chocolate Type</h2> <!-- Subheading for chocolate type selection -->
+                <p>Pick one or more chocolate types to get started:</p> <!-- Instruction for users -->
+                <label><input type="checkbox" name="chocolate-type" value="milk"> Milk Chocolate</label> <!-- Option for Milk Chocolate -->
+                <label><input type="checkbox" name="chocolate-type" value="dark"> Dark Chocolate</label> <!-- Option for Dark Chocolate -->
+                <label><input type="checkbox" name="chocolate-type" value="white"> White Chocolate</label> <!-- Option for White Chocolate -->
+                <label><input type="checkbox" name="chocolate-type" value="ruby"> Ruby Chocolate</label> <!-- Option for Ruby Chocolate -->
+            </div>
+
+            <!-- Step 2: Add Toppings -->
+            <div class="selection-group">
+                <h2>Step 2: Add Toppings</h2> <!-- Subheading for toppings selection -->
+                <p>Add any toppings you like for extra flavor:</p> <!-- Instruction for users -->
+                <label><input type="checkbox" name="topping" value="nuts"> Nuts</label> <!-- Option for Nuts -->
+                <label><input type="checkbox" name="topping" value="sprinkles"> Sprinkles</label> <!-- Option for Sprinkles -->
+                <label><input type="checkbox" name="topping" value="coconut"> Coconut Flakes</label> <!-- Option for Coconut Flakes -->
+                <label><input type="checkbox" name="topping" value="dried-fruits"> Dried Fruits</label> <!-- Option for Dried Fruits -->
+            </div>
+
+            <!-- Step 3: Choose Fillings -->
+            <div class="selection-group">
+                <h2>Step 3: Choose Your Fillings</h2> <!-- Subheading for fillings selection -->
+                <p>Fill your chocolates with delicious options:</p> <!-- Instruction for users -->
+                <label><input type="checkbox" name="filling" value="caramel"> Caramel</label> <!-- Option for Caramel -->
+                <label><input type="checkbox" name="filling" value="hazelnut-cream"> Hazelnut Cream</label> <!-- Option for Hazelnut Cream -->
+                <label><input type="checkbox" name="filling" value="raspberry-jam"> Raspberry Jam</label> <!-- Option for Raspberry Jam -->
+                <label><input type="checkbox" name="filling" value="vanilla-cream"> Vanilla Cream</label> <!-- Option for Vanilla Cream -->
+            </div>
+
+            <!-- Step 4: Select Box Size -->
+            <div class="selection-group">
+                <h2>Step 4: Select Your Box Size</h2> <!-- Subheading for box size selection -->
+                <p>Pick a box size to fit your selection:</p> <!-- Instruction for users -->
+                <label><input type="radio" name="box" value="small"> Small Box (10 pieces)</label> <!-- Option for Small Box -->
+                <label><input type="radio" name="box" value="medium"> Medium Box (20 pieces)</label> <!-- Option for Medium Box -->
+                <label><input type="radio" name="box" value="large"> Large Box (30 pieces)</label> <!-- Option for Large Box -->
+            </div>
+
+            <!-- Step 5: Select Occasion -->
+            <div class="selection-group">
+                <h2>Step 5: Select an Occasion</h2> <!-- Subheading for occasion selection -->
+                <p>Choose an occasion for your chocolate box:</p> <!-- Instruction for users -->
+                <select name="occasion"> <!-- Dropdown for selecting occasion -->
+                    <option value="birthday">Birthday</option> <!-- Option for Birthday -->
+                    <option value="anniversary">Anniversary</option> <!-- Option for Anniversary -->
+                    <option value="holiday">Holiday</option> <!-- Option for Holiday -->
+                    <option value="graduation">Graduation</option> <!-- Option for Graduation -->
+                    <option value="thank_you">Thank You</option> <!-- Option for Thank You -->
+                </select>
+            </div>
+
+            <!-- Build Box Button -->
+            <button class="submit-button">Build My Box</button> <!-- Button to finalize selections -->
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; All copyright Weston's Chocolates 2024</p> 
+    </footer>
+</body>
+</html>
