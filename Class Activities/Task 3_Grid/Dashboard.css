@@ -1,0 +1,103 @@
+/*Styling dashboard page*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/* Ensures padding and border are included in element's total width and height */
+}
+
+body {
+    font-family: Arial, sans-serif;/*font */
+    background-color: #f5f5dc; /*  background */
+    color: #ffffff; /* White text */
+    display: flex; /* Enables a flexible layout */
+    height: 100vh;
+}
+
+/* Container for the dashboard layout */
+.container {
+    display: grid; /* Using Grid for layout */
+    grid-template-columns: 250px 1fr; /* Two columns: sidebar and main content */
+    grid-template-rows: 80px 1fr; /* Two rows: header and content area */
+    grid-template-areas: 
+        "header header" /* Header spans both columns */
+        "sidebar main-content"; /* Sidebar on the left, main content on the right */
+    width: 100%; /* Full width of the viewport */
+}
+
+/* Header styling */
+.header {
+    grid-area: header;
+    background-color: #2b1b18; /* background colour of header */
+    display: flex;/* Enables flexible alignment of header items */
+    align-items: center; /* Vertically centers content */
+    justify-content: center; /* Horizontally centers content */
+    font-size: 1.2rem;
+    padding: 10px;/* Adds space inside the header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Sidebar */
+.sidebar {
+    grid-area: sidebar;/* Assigning this section to the sidebar area */
+    background-color:  #2b1b18; /* colour for sidebar */
+    padding: 20px;/* Adds space inside the sidebar */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar ul {
+    list-style: none;/* Removes bullet points from list items */
+}
+
+.sidebar ul li {
+    margin: 15px 0; /* Adds vertical space between items */
+    padding: 10px; /* Adds space inside list items */
+    font-size: 1.2rem; /* font size for items */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background 0.3s ease; /* Smooth background transition on hover */
+    border-radius: 5px; /* Rounds the corners of sidebar items */
+    color: #ffffff; /* White text for sidebar items */
+}
+
+.sidebar ul li:hover {
+    background-color: #5d4037; /* Medium brown on hover */
+}
+
+/* Main content area styling */
+.main-content {
+    grid-area: main-content; /* Assigns this section to the main content area */
+    display: grid; /* Using Grid for layout */
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns for widgets */
+    gap: 20px; /* Adds space between widgets */
+    padding: 20px; /* Adds space inside the main content area */
+    background-color: #f5f5dc; /* background colour for the main content */
+}
+
+/* Widget */
+.widget {
+    background-color: #3e2723; /* Dark brown background for widgets */
+    color: #ffffff; /* White text  */
+    padding: 20px; /* Adds space inside widgets */
+    border-radius: 10px; /* Rounds the corners of widgets */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* adds shadows */
+}
+
+.widget h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;/* Adds space below the title */
+    color: #ffffff; /* White for widget header */
+}
+
+.widget ul {
+    list-style: none; /* Removes bullet points from list items */
+    padding-left: 0; /* Removes left padding from the list */
+}
+
+.widget ul li {
+    margin: 10px 0;/* Adds vertical space between items */
+    color: #ffffff; /* White text for items */
+    transition: color 0.3s ease;/* Smooth color transition on hover */
+}
+
+.widget ul li:hover {
+    color: #c0c0c0;/* Changes text color to light gray on hover for emphasis */
+}

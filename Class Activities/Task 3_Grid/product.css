@@ -1,0 +1,86 @@
+/* styling product page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background */
+    color: #f0e68c; /* text colour */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+}
+
+/* Container for product layout */
+.container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+    grid-template-rows: auto auto; /* Automatically adjust rows */
+    max-width: 800px; /* Max width for desktop */
+    margin: 20px;
+    padding: 20px;
+    background-color: #1a1a1a; /* background colour for product card */
+   
+}
+
+/* Product image styles */
+.product-image img {
+    width: 100%; /* Full width of the grid cell */
+    border-radius: 15px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Product details styling */
+.product-details {
+    padding: 20px; /* Padding around the details */
+}
+
+/* Title styling */
+.product-title {
+    font-size: 2.5rem; /* Large font size for title */
+    margin-bottom: 10px; /* Space below the title */
+    color: #ffd700; /* color for title */
+}
+
+/* Price styling */
+.product-price {
+    font-size: 1.8rem; /* Slightly larger font for price */
+    color: #f0e68c; /* color for price */
+    margin-bottom: 10px; /* Space below the price */
+}
+
+/* Description styling */
+.product-description {
+    font-size: 1.1rem; /* Regular font size for description */
+    line-height: 1.5; /* This sets the space between lines of text to be 1.5 times the font size, making it easier to read. */
+    color: #d3d3d3; /* colour for description text */
+}
+
+/* Buy Button styling */
+.buy-button {
+    display: inline-block; /* Makes the link behave like a block element */
+    padding: 10px 20px; /* Padding around the button */
+    background-color: #ffd700; /* background colour for the button */
+    color: #000; /* Black text */
+    text-decoration: none; /* Remove underline from link */
+    border-radius: 5px; /* Slightly rounded corners */
+    font-size: 1.2rem; /* font size */
+    margin-top: 15px; /* Space above the button */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.buy-button:hover {
+    background-color: #e0c368; /* background colour for hover */
+}
+
+/* Responsive styling for desktop */
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: 1fr 2fr; /* Two columns for desktop: image and details */
+        grid-template-rows: auto; /* Single row for desktop */
+    }
+}

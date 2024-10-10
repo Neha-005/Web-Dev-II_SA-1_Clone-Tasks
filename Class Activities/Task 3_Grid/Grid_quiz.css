@@ -1,0 +1,75 @@
+/* Styling the quiz page */
+body {
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; 
+    background-color: #001947; /* background colour */
+    display: flex;
+    flex-direction: column; /* Arranging items vertically */
+    align-items: center; /* Center items horizontally */
+    height: 100vh; /* Full viewport height */
+    justify-content: center; /* Center content vertically */
+    padding-top: 40px; /* Added padding to push content down */
+}
+
+/* Styling for the main heading */
+h1 {
+    color: white; /* White text for the heading */
+    margin-bottom: 10px;
+    padding-top: 40px; 
+    text-align: center; /* Center the text */
+    font-size: 2rem; /*font size for heading */
+}
+
+/* Styling the quiz container */
+.quiz-container {
+    background-color: #ffffff; /*  background colour for the container */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    padding: 20px; /* Space inside the container */
+    width: 80%; /* Responsive width */
+    max-width: 600px; /* Max width for larger screens */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+}
+
+/* Styling each question */
+.question {
+    margin-bottom: 20px; /* Space between questions */
+}
+
+/* Grid layout for the answer options */
+.options-grid {
+    display: grid; /* Applying grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+    gap: 10px; /* Space between options */
+    margin-top: 10px; /* Space above the options */
+}
+
+/* Styling each answer label */
+.options-grid label {
+    background-color: #5280c5; /* background colour for options */
+    padding: 10px; /* Padding inside each option */
+    border-radius: 5px; /* small rounding for labels */
+    cursor: pointer; /* Pointer on hover */
+    text-align: center; /* Center text inside each option */
+}
+
+/* Hover effect to indicate selection */
+.options-grid label:hover {
+    background-color: #b9c3cf; /* background colour on hover */
+}
+
+/* Styling the submit button */
+button {
+    width: 100%; /* Full width button */
+    padding: 15px; /* Space inside the button */
+    background-color: #0046d5; /* button color */
+    color: white; /* White text for contrast */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Rounded button corners */
+    font-size: 16px; 
+    cursor: pointer; /* Pointer on hover */
+}
+
+/* Hover effect for the submit button */
+button:hover {
+    background-color: #0034a1; /* background colour when hovering */
+}

@@ -1,0 +1,48 @@
+/* Including padding and border in the element's total size */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0; 
+    display: flex; /* Using flexbox for layout */
+    justify-content: center; /* Center the container horizontally */
+    align-items: center; /* Center the container vertically */
+    min-height: 100vh; /* Full viewport height */
+    background-color: #ffbaddaf; /* Background color */
+}
+
+/* Main container for the grid */
+.container {
+    padding: 20px; /* Padding around the container */
+}
+
+/* Styling the photo grid */
+.photo-grid {
+    display: grid; /* Using grid for layout */
+    gap: 20px; /* Space between images */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    max-width: 800px; /* Maximum width for centering */
+    margin: auto; /* Center the grid */
+}
+
+/* Styling for images */
+.photo-grid img {
+    width: 100%; /* Making images responsive */
+    height: auto; /* Maintaining aspect ratio */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for images */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-grid {
+        grid-template-columns: 1fr; /* 1 column for mobile phones */
+    }
+}

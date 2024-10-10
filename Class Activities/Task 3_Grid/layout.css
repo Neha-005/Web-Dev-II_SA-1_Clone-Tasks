@@ -1,0 +1,73 @@
+/*Styling grid layout page*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;/*Removing default margin*/
+    padding: 0;/*removing default padding*/
+    background-color: #1f1313; /* dark brown background colour */
+    color: #F5E0C3; /* text colour */
+}
+
+/* Container showing both the sidebar and main content */
+.container {
+    display: grid;/*using grid layout*/
+    grid-template-columns: 1fr 3fr; /* Sidebar takes 1 part of the page, main content takes 3 part of the page */
+    gap: 20px; /* Space between columns */
+    padding: 20px;
+    max-width: 1200px;/* width of the container */
+    margin: auto; /* Centers the container */
+}
+
+/*Styling sidebar*/
+.sidebar {
+    background-color: #4d3023; /* background colour for the sidebar */
+    padding: 20px;
+    color: #F5E0C3; /* text colour in side bar*/
+}
+
+/* Sidebar headers for title and sections */
+.sidebar h1, .sidebar h3 {
+    margin-top: 0; /* removes top margin */
+    color: #D2691E; /* text colour for heading */
+}
+
+/* Styling for the image in the sidebar */
+.sidebar img {
+    width: 100%; /* Make the image take full width of the sidebar */
+    margin-top: 10px;
+}
+
+/* Unordered list in the sidebar */
+.sidebar ul {
+    list-style-type: none;/* Removing default list style */
+    padding: 0;
+    margin-top: 10px;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;/* Space between list items */
+}
+
+/*Main content styling*/
+.main-content {
+    background-color: #3F2A24; /* background colour for main content */
+    padding: 20px;
+}
+
+.main-content h2 {
+    color: #D2691E; /* text colour for heading */
+    border-bottom: 2px solid #8B4513; /* colour for borders */
+    padding-bottom: 5px;/* Space below the text before the border */
+    margin-bottom: 15px;/* Space after the header */
+}
+
+.main-content p, .main-content ul, .main-content ol {
+    color: #F5E0C3; /* text colour */
+}
+
+.main-content ul, .main-content ol {
+    margin-left: 20px; /*moving the list items a bit to the right*/
+}
+
+.main-content ol li {
+    margin-bottom: 10px;/* Space between items in the ordered list */
+}
