@@ -1,0 +1,63 @@
+/* Styling for card design page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;/*font style*/
+    display: flex; /* Using flexbox to center the card */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Setting the height of the page to 100% of the viewport */
+    background-color: #200000; /* background color */
+  }
+  
+  /* Card container */
+  .card {
+    background-color: #ffffff; /* Background color for container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding shadows */
+    max-width: 350px;
+    width: 100%;
+    display: flex; /* Flexbox to stack items vertically inside the card */
+    flex-direction: column; /* Ensuring content is arranged vertically */
+    align-items: center; /* Centering items inside the card */
+    text-align: center; /* Centering text inside the card */
+    padding: 20px; /* Adding space inside the card */
+  }
+  
+  .card img {
+    width: 100%; /* Making the image take the full width of the card */
+    max-height: 200px; /* Maximum height of the image */
+    object-fit: cover; /* Ensuring the image covers the entire area without distortion */
+    margin-bottom: 15px; /* Adding space below the image */
+  }
+  
+  /* Card title styling */
+  .card-title {
+    font-size: 22px;
+    color: #331900;
+    margin: 10px 0; /* Adding vertical spacing around the title */
+    font-weight: 600; /* Making the text bold */
+  }
+  
+  /* Card description styling */
+  .card p {
+    font-size: 16px;
+    color: #0e0e0e; /* colour for text */
+    margin: 20px 0; /* Spacing around the description */
+  }
+  
+  /* Card button styling */
+  .card-btn {
+    padding: 10px 20px;
+    background-color: #270000; /*colour of the button*/
+    color: white;
+    border: none; /* Removes border */
+    border-radius: 5px;
+    cursor: pointer; /* Changing the cursor to a pointer when hovering over the button */
+    font-size: 16px; /* Size of the font */
+  }
+  
+  /* Changing background color on hover for the button */
+  button:hover {
+    background-color: #8b0000; /* color for hover */
+  }
+  

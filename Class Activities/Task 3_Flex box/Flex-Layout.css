@@ -1,0 +1,41 @@
+/* Styling flex box layout page */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #7e2400b9; /* background colour */
+}
+
+.navbar {
+    background-color: #310e00; /* background color for navigation bar */
+    padding: 10px 0; /* Adds padding above and below the navigation bar */
+}
+
+.links {
+    display: flex; /* Uses Flexbox to arrange the links */
+    justify-content: space-evenly; /* Distributes the links evenly across the navbar */
+    list-style-type: none; /* Removes bullet points from the list */
+    margin: 0;
+    padding: 0;
+}
+
+.links li {
+    margin: 0; /* Ensuring no margin between list items */
+}
+
+.links a {
+    color: #ffffff; /* Color for the link text */
+    text-decoration: none; /* Removes underline from links */
+    padding: 14px 20px;
+    display: block; /* Makes the link fill the space like a button */
+    font-size: 16px; /* Size of the font */
+    font-weight: bold; /* Makes the link text bold */
+    transition: all 0.3s ease; /* Adds transition for hover effects */
+}
+
+.links a:hover {
+    background-color: #692209; /*  color for hover effect */
+    color: #ffffff; /* Text color */
+    border-radius: 4px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4); /* Shadow for the box */
+}
+

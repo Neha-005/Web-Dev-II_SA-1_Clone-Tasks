@@ -1,0 +1,45 @@
+/*Styling image gallery page*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #272727;
+    margin: 0;
+    padding: 20px;/* padding to the page */
+}
+
+header {
+    text-align: center; /* making the text center*/
+    margin-bottom: 20px; /* adding space below the header */
+    color: white; /*white colour text*/
+    -webkit-text-stroke: 2px black;/*to give outline to the text*/
+}
+
+.gallery {
+    display: flex;/* Using flexbox to arrange gallery items in a row */
+    flex-wrap: wrap;
+    justify-content: center;/* Center the gallery items horizontally */
+}
+
+/* Styling for individual image box */
+.gallery-item {
+    width: 25%; 
+    margin: 10px; /* Adding space between gallery items */
+    background-color: #000000;
+    border: 2px solid #000000;/* Black border around the gallery item */
+    border-radius: 5px;/*adding border*/
+    overflow: hidden;/* Ensuring the content doesn’t go outside the box */
+    text-align: center;/*centered text*/
+}
+
+.gallery-item img {
+    width: 80%; 
+    height: 290px; 
+    object-fit: cover; /* Ensuring the images fill the container without distortion */
+}
+
+.caption {
+    padding: 10px; /* Adding space around the text */
+    font-size: 1.2em;/*size of the font*/
+    background-color: #333;
+    color: #ffffff;/*text colour*/
+}
+

@@ -1,0 +1,78 @@
+/* styling to-do-list page */
+body {
+    margin: 0; 
+    font-family: Arial, sans-serif; 
+    background-color: #f8d2a9; /* background colour */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center the container horizontally */
+    align-items: center; /* Center the container vertically */
+    height: 100vh; /* Full height of the viewport */
+}
+
+/* Styling the container */
+.container {
+    background-color: #c99870; /*background colour for container*/
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* shadow for depth */
+    padding: 20px; /* Padding inside the container */
+    width: 400px; /* Width of the container */
+}
+
+/* Title styling */
+h1 {
+    text-align: center; /* center the title */
+    color: #000000; /* text colour*/
+}
+
+/* Task form styling */
+.task-form {
+    display: flex; /* flexbox for the form layout */
+    justify-content: space-between; /* Space out input and button */
+    margin-bottom: 20px; /* Space below the form */
+}
+
+/* Input styling */
+.task-input {
+    padding: 10px; /* Padding for the input */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    flex: 1; /* Makes the element flexible, allowing it to grow and take up available space in the flex container */
+    margin-right: 10px; /* Space between input and button */
+}
+
+/* Button styling */
+.add-button {
+    background-color: #a66d55; 
+    color: white; /* White text color for button */
+    border: none; /* No border */
+    padding: 10px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Task list container */
+.task-list {
+    margin-top: 20px; /* Space above the task list */
+}
+
+/* Individual task styling */
+.task {
+    display: flex; /* Flexbox for task layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between elements */
+    background-color: #ffffff; /* White background for tasks */
+    border: 1px solid #d5b8a1; /* border for tasks */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding inside the task */
+    margin-bottom: 10px; /* Space below each task */
+}
+
+/* Delete button styling */
+.delete-button {
+    background-color: #e86b6b; /*color for delete button */
+    color: white; /*  text color for button */
+    border: none; /* No border */
+    padding: 5px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}

@@ -1,0 +1,68 @@
+<!--Create a quiz layout where questions are displayed in a column and answer choices are displayed in a row using Flexbox. 
+Style it to be visually appealing.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Quiz</title>
+    <link rel="stylesheet" href="Quiz.css"> <!-- Linking to the stylesheet -->
+</head>
+<body>
+    <h1><u></u>Basic HTML & CSS Quiz</u></h1> <!-- Quiz Title -->
+    <div class="quiz-container"><!-- Container for the Questions and option -->
+        <form><!-- Form element for user input and submission -->
+            <div class="question">
+                <p>1. What does HTML stand for?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a"> A) Hyper Text Markup Language</label>
+                    <label><input type="radio" name="q1" value="b"> B) High Text Markup Language</label>
+                    <label><input type="radio" name="q1" value="c"> C) Hyperlinks and Text Markup Language</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>2. What does CSS stand for?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a"> A) Colorful Style Sheets</label>
+                    <label><input type="radio" name="q3" value="b"> B) Cascading Style Sheets</label>
+                    <label><input type="radio" name="q3" value="c"> C) Computer Style Sheets</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>3. Which HTML element is used for the largest heading?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a"> A) &lt;h1&gt;</label>
+                    <label><input type="radio" name="q2" value="b"> B) &lt;h6&gt;</label>
+                    <label><input type="radio" name="q2" value="c"> C) &lt;heading&gt;</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>4. Which HTML tag is used to define an unordered list?</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="a"> A) &lt;ul&gt;</label>
+                    <label><input type="radio" name="q4" value="b"> B) &lt;ol&gt;</label>
+                    <label><input type="radio" name="q4" value="c"> C) &lt;list&gt;</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>5. Which CSS property controls the text size?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="a"> A) font-size</label>
+                    <label><input type="radio" name="q5" value="b"> B) text-size</label>
+                    <label><input type="radio" name="q5" value="c"> C) text-font</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>6. What is the correct HTML element for inserting a line break?</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="a"> A) &lt;break&gt;</label>
+                    <label><input type="radio" name="q6" value="b"> B) &lt;br&gt;</label>
+                    <label><input type="radio" name="q6" value="c"> C) &lt;lb&gt;</label>
+                </div>
+            </div>
+            <button type="submit">Submit</button> <!-- Submit Button -->
+        </form>
+    </div>
+</body>
+</html>
