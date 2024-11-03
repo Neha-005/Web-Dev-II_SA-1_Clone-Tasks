@@ -1,0 +1,261 @@
+/*Styling Erased Tapes home page */ /*Desktop viewpoint (1024px and up)*/
+body {
+    font-family: 'Josefin Sans', sans-serif; /* Using Google font for body text */
+    background-color: #e9e9e9; /* background colour of the body*/
+    margin: 0;/*removing default margin*/
+    padding: 0;/*removing default padding*/
+    line-height: 1.5; /* controls the amount of space above and below text lines*/
+}
+
+/* Heading Styles */
+h1, h2, h3 { 
+    font-family: 'Protest Guerrilla', sans-serif; /* Using Google font for headings */
+}
+
+/* Header Styles */
+header {
+    align-items: center;/* Aligning the items vertically in the center of the container */
+    padding: 15px; /* Adds space inside the header */
+    display: flex; /* applying flexbox layout for the header */
+    flex-direction: column; /* Stacking (logo and nav) vertically */
+}
+
+/*Stying Navigation bar*/
+nav ul {
+    list-style-type: none; /* Removes bullets from list items */
+    display: flex; /* applying flexbox layout for the navigation items */
+    gap: 150px; /* Space between nav items */
+    padding-top: 20px; /* Space above the nav list */
+}
+
+nav ul li {
+    color: black; /* text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 10px 20px; /* Adds space around each item */
+    transition: background-color 0.3s ease;/* Smooth transition for hover background */
+}
+
+/* Hover effect */
+nav ul li:hover {
+    background-color: #1a1a1a; /*box colour*/
+    color: white; /* text color */
+}
+
+/* Logo Styling */
+.logo img {
+    width: 200px; /* Size of the logo image */
+}
+
+/* Main content area */
+main {
+    background-color: white; /* White background for main content */
+    margin: 50px auto; /* Centers the main content with vertical margin */
+    padding: 0 50px; /* Adds horizontal padding inside the main area */
+    max-width: 1024px; /* Setting maximum width for the main content area */
+}
+
+h1 {
+    margin-bottom: 20px; /* Space below the heading */
+    font-family: 'Protest Guerrilla', sans-serif; /* applying font for main heading */
+    font-size: 3.5rem; /* font size for main heading */
+}
+
+/* Introduction paragraph */
+.intro {
+    margin-bottom: 50px; /* Space below the intro paragraph */
+    font-size: 1.33rem; /* size of the font text */
+    line-height: 1.6;   /* Controls spacing between lines */
+}
+
+/* Section layout for the main content */
+.Headings {
+    column-count: 3; /* Creating 3 equal columns */
+    column-gap: 40px; /* Space between columns */
+    margin: 30px 0; /* Space above and below the headings section */
+}
+
+/* Styling for the headings */
+h2 {
+    break-inside: avoid; /* Prevent heading from splitting across columns */
+    font-family: 'Protest Guerrilla', sans-serif; /* Custom font for headings */
+    font-size: 2rem; /* Heading font size */
+    margin-top: 30px; /* Space above the heading */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+/* Styling for paragraphs */
+p {
+    font-size: 1.1rem; /* Adjusted paragraph font size */
+    line-height: 1.6; /* Improved line spacing for readability */
+    margin-top: 10px; /* Space above paragraphs */
+    margin-bottom: 20px; /* Space below paragraphs */
+}
+/* Image Grid Section */
+.image-grid {
+    display: grid; /* applying grid layout for images */
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns for images */
+    margin: 50px 0; /* Space above and below the image grid */
+}
+
+.image-grid img {
+    height: auto; /* Maintains aspect ratio of images */
+    object-fit: cover; /* Ensures images cover the entire area without distortion */
+    width: 100%; /* Makeing images responsive, taking full width of the column */
+}
+
+/* Author Section */
+.author-section {
+    margin-top: 50px; /* Space above the author section */
+    padding-top: 30px; /* Space above the author's text */
+    border-top: 2px solid #e9e9e9; /* Light top border for separation */
+    justify-content: space-between; /* Spaces out the profile image and text */
+    align-items: center; /* Vertically centers items in the author section */
+    display: flex; /* Enables flexbox layout for author section */
+    flex-direction: row-reverse; /* Reverses the order: profile picture goes to the right, text to the left on desktops and tablets.
+    (On large and small mobile screens, it changes automatically so the profile picture appears on top and the text below, 
+    just like the wireframe shows for mobile devices.) */
+}
+
+.author-text {
+    text-align: left; /*Author text on the left*/
+}
+
+.author-text h2 {
+    font-family: 'Protest Guerrilla', sans-serif;/*Font for author heading*/
+    font-size: 2rem;/*Font size for the author heading*/
+    font-weight: bold;/*makes the heading bold*/
+    text-align: center;/*makes the heading in the center*/
+}
+
+.author-text p {
+    line-height: 1.6;/*line spacing*/
+    margin-top: 10px;/*Adds space above the text*/
+}
+
+.author-image img {
+    border-radius: 50%;/*Makes the author image circular*/
+    margin-right: 50px;/*Adds space to the right of the image*/
+    width: 200px;/*Width of the author image*/
+}
+
+footer {
+    background-color: #14181d; /* Dark background for footer */
+    text-align: center; /* Centers footer text */
+    font-size: 0.9rem; /*font size for footer */
+    color: white; /* White text color for footer */
+    padding: 20px; /* Space inside the footer */
+}
+
+/* Responsive Styles for Different Devices */
+
+/* Tablet Layout viewpoint (`720px-1024px`) */
+@media (max-width: 1024px) {
+    main {
+        padding: 0 30px; /* Adjusts padding for tablet devices */
+    }
+
+    h1 {
+        font-size: 6rem; /* Makes heading larger on tablet */
+    }
+
+    .Headings {
+        column-count: 1; /* Stack content in a single column on large mobile */
+    }
+
+    .Headings h2 {
+        text-align: center; /* Center text for h2 headings */
+    }
+
+    .Headings p {
+        text-align: left; /* Left align paragraphs */
+    }
+
+    header {
+        padding: 30px; /* Reduces header padding for tablet */
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2-column layout for images on tablet */
+    }
+}
+
+/* Large Mobile Layout viewpoint (`540px-720px`) */
+@media (max-width: 720px) {
+    .logo img {
+        width: 80px; /* Smaller logo for mobile */
+    }
+
+    .Headings {
+        column-count: 1; /* Stack content in a single column on large mobile */
+    }
+
+    .Headings h2 {
+        text-align: center; /* Center text for h2 headings */
+    }
+
+    .Headings p {
+        text-align: left; /* Left align paragraphs */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Smaller heading for mobile */
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr; /* Single column for images on mobile */
+    }
+
+    .author-section {
+        flex-direction: column; /* Stacks profile and text vertically on mobile */
+        align-items: center; /* Centers the profile image and text */
+        text-align: center; /* Centers text */
+        margin-top: 20px; /* Space above the author section */
+    }
+
+    .author-image img {
+        width: 200px; /* Adjusted size for larger mobile profile picture */
+        margin-bottom: 10px; /* Space between image and text */
+        border-radius: 50%; /* Makes it circular */
+        margin-left: 50px; /* Space to the left of the image */
+    }
+}
+
+/* Small Mobile Layout viewpoint (`360px-540px`) */
+@media (max-width: 540px) {
+    main {
+        padding: 12px; /* Less padding for small mobile devices */
+    }
+
+    nav ul {
+        gap: 12px; /* Closer gap between nav items */
+    }
+
+    h1 {
+        font-size: 2rem; /* Smaller heading for small mobile */
+    }
+
+    .Headings {
+        column-count: 1; /* Stack content in a single column on large mobile */
+    }
+
+    .Headings h2 {
+        text-align: center; /* Center text for h2 headings */
+    }
+
+    .Headings p {
+        text-align: left; /* Left align paragraphs */
+    }
+
+    .author-section {
+        align-items: center; /* Centers the profile image and text */
+        text-align: center; /* Centers text */
+    }
+
+    .author-image img {
+        width: 150px; /* Adjusted size for small mobile profile picture */
+        margin-bottom: 10px; /* Space between image and text */
+        border-radius: 50%; /* Makes it circular */
+        margin-left: 50px; /*Space to the left of the image */
+    }
+}
+
