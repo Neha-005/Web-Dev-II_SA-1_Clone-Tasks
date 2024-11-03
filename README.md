@@ -10,7 +10,9 @@ Each project emphasizes creating responsive, accessible, and user-friendly layou
 _______________________________________________________________________________________________________________________________
 
 **Task 1: Layout and Typography**
+
 Project Description
+
 This task involves creating a responsive website for a blog post about the Erased Tapes Records music label. The design adjusts across small mobile devices, large mobile devices, tablets, and desktops. Key features include typography and spacing adjustments for readability on different devices.
 
 Technologies Used
