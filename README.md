@@ -7,6 +7,8 @@ This repository includes solutions to two tasks:
 2) Advanced Layout for a fictional movie streaming service website called 'watch.it.'
 Each project emphasizes creating responsive, accessible, and user-friendly layouts using CSS Grid, Flexbox, and CSS media queries, ensuring compatibility across various screen sizes.
 
+_______________________________________________________________________________________________________________________________
+
 **Task 1: Layout and Typography**
 Project Description
 This task involves creating a responsive website for a blog post about the Erased Tapes Records music label. The design adjusts across small mobile devices, large mobile devices, tablets, and desktops. Key features include typography and spacing adjustments for readability on different devices.
