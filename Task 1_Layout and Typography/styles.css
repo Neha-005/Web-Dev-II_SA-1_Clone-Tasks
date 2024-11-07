@@ -32,7 +32,7 @@ nav ul li {
     color: black; /* text color */
     cursor: pointer; /* Pointer cursor on hover */
     padding: 10px 20px; /* Adds space around each item */
-    transition: background-color 0.3s ease;/* Smooth transition for hover background */
+    transition: background-color 0.3s ease;/*transition for hover background */
 }
 
 /* Hover effect */
@@ -100,7 +100,7 @@ p {
 .image-grid img {
     height: auto; /* Maintains aspect ratio of images */
     object-fit: cover; /* Ensures images cover the entire area without distortion */
-    width: 100%; /* Makeing images responsive, taking full width of the column */
+    width: 100%; /* Making images responsive, taking the full width of the column */
 }
 
 /* Author Section */
