@@ -11,18 +11,20 @@ ________________________________________________________________________________
 
 **Task 1: Layout and Typography**
 
-Project Description:-
+###Project Description:-
 
 This task involves creating a responsive website for a blog post about the Erased Tapes Records music label. The design adjusts across small mobile devices, large mobile devices, tablets, and desktops. Key features include typography and spacing adjustments for readability on different devices.
 
-Technologies Used:-
+###Technologies Used:-
+
 HTML5
 CSS
 Google Fonts: "Protest Guerrilla" for headings, "Josefin Sans" for body text
 CSS Grid and Flexbox for layout management
 CSS Media Queries for Responsive Design
 
-Target Devices:-
+###Target Devices:-
+
 Small Mobile: 360px–540px
 Large Mobile: 540px–720px
 Tablet: 720px–1024px
@@ -32,17 +34,17 @@ Wireframes were followed to ensure layout, typography, and colour scheme consist
 
 **Task 2: Advance Layout**
 
-Project Description:-
+###Project Description:-
 
 watch.it is a responsive website for a  made-up movie streaming platform. Designed for mobile, tablet, and desktop views, it displays movie cards in a grid layout, adhering to specified brand colours, fonts, and layout requirements.
 
-Technologies Used:-
+###Technologies Used:-
 
 HTML5: Structure and content.
 CSS3 (SCSS): Styling and layout, including responsive design.
 Google Fonts: Teko and Lato font families.
 
-Target Devices:-
+###Target Devices:-
 
 Mobile: 360px-720px
 Tablet: 720px-1024px
