@@ -1,0 +1,257 @@
+// Colors 
+$dark-blue: #070410;// color for the body
+$white: #FFFFFF; // color for text
+$teal: #4DCCBD;// color for buttons and hover effects
+$purple: #231651;// color for the header and movie card backgrounds
+$yellow: #EEF36A;// color for emphasized text and hover effects
+
+// Fonts
+$font-heading: 'Teko', sans-serif;  // Heading font
+$font-body: 'Lato', sans-serif;     // Body text font
+
+// Spacing values 
+$spacing-mobile: 16px;   // Mobile spacing 
+$spacing-tablet: 32px;   // Tablet spacing 
+$spacing-desktop: 48px;  // Desktop spacing 
+
+// Styling Watch list page
+* {
+    margin: 0; // Removes default margin 
+    padding: 0;// Remove default padding 
+    box-sizing: border-box;  
+}
+
+// Body Styling
+body {
+    background-color: $dark-blue; // the background color of the body
+    color: $white; //text color to white
+    font-family: $font-body;//  body font to Lato
+    line-height: 1.6;
+}
+
+// Header Section
+header {
+    display: flex;// Using flexbox to align header items
+    justify-content: space-between;    //Space out header items  
+    align-items: center; // Vertically align header items
+    padding: $spacing-mobile;   
+    background-color: $purple;             
+
+    h1 {
+        font-family: $font-heading;         
+        font-size: 2rem;                    
+        color: $white;                     
+    }
+
+    nav {
+        display: flex; // Using flexbox for navigation links
+        flex: 1;// Allowing nav to take full width
+        justify-content: center;           
+        gap: $spacing-desktop; // Adds large gap between navigation items
+
+        a {
+            color: $white;                   
+            text-decoration: none; // Removes underline from links
+            font-size: 1rem;                 
+
+            // Hover effect for links
+            &:hover {
+                color: $teal // Changes link color to teal when hovered
+            }
+        }
+    }
+
+    .search-container {
+        input[type="search"] {
+            padding: 8px;                   
+            font-size: 1rem;                 
+            border: none; // Removes border from the search input
+            border-radius: 4px;// Adds rounded corners to search input
+        }
+    }
+}
+
+// Responsive Header for Tablet and Mobile
+@media (max-width: 1024px) {
+    header {
+        padding: $spacing-tablet; // Adds padding for tablet devices
+
+        h1 {
+            font-size: 1.8rem;                   
+        }
+
+        nav {
+            gap: $spacing-tablet;// gap between links for tablet view
+
+            a {
+                font-size: 0.9rem;              
+            }
+        }
+    }
+}
+
+@media (max-width: 719px) {
+    header {
+        padding: $spacing-mobile;// Add small padding for mobile devices
+
+        h1 {
+            font-size: 1.6rem;                   
+        }
+
+        nav {
+            gap: $spacing-mobile;//  gap between nav items for mobile
+            flex-direction: column;// stack navigation links vertically
+            align-items: center; // center the nav links horizontally
+
+            a {
+                font-size: 0.8rem;              
+            }
+        }
+
+        .search-container {
+            input[type="search"] {
+                padding: 6px; // Adds less padding to search input for mobile
+                font-size: 0.9rem; // Adjust font size for mobile search input
+            }
+        }
+    }
+}
+
+// Main Content Container Styling
+.container {
+    max-width: 900px;
+    margin: 0 auto; // Center the container horizontally
+    padding: $spacing-desktop;      
+
+    @media (max-width: 1024px) {
+        padding: $spacing-tablet;         
+    }
+
+    @media (max-width: 719px) {
+        padding: $spacing-mobile;
+    }
+}
+
+// Movie Grid Layout Styling
+.movie-grid {
+    display: grid;// Use grid layout for the movie grid
+    gap: $spacing-mobile;// Small gap between movie cards
+
+    // Defines the grid layout for the movie sections
+    grid-template-areas:
+        "movie1"
+        "movie2 movie3"
+        "movie4"
+        "movie5"
+        "movie6";
+
+    // Tablet Layout (two-column grid)
+    @media (min-width: 720px) and (max-width: 1024px) {
+        grid-template-columns: 1fr 1fr; // two columns for tablet view
+        gap: $spacing-tablet;//gap between movie cards for tablet view
+    }
+
+    // Desktop Layout (two-column grid, full width for some movie cards)
+    @media (min-width: 1024px) {
+        gap: $spacing-desktop;// gap between movie cards for desktop
+        grid-template-columns: 1fr 1fr;// two columns for desktop view
+        grid-template-areas:
+            "movie1 movie1" // Movie 1 spans the full width
+            "movie2 movie3" // Movie 2 and 3 side by side
+            "movie4 movie4" // Movie 4 spans the full width
+            "movie5 movie5" // Movie 5 spans the full width
+            "movie6 movie6";// Movie 6 spans the full width
+    }
+}
+
+// Mobile Grid Layout (single column)
+@media (max-width: 719px) {
+    .movie-grid {
+        grid-template-columns: 1fr;// one column for mobile view
+        gap: $spacing-mobile;// smaller gap for mobile view
+    }
+}
+
+// Movie Card Styles
+.movie {
+    background-color: $purple;
+    overflow: hidden;// prevent content overflow
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); // Adds shadow for depth 
+    color: $white;                      
+    display: flex;// Using flexbox to arrange card content
+    flex-direction: column;  // Stack content vertically inside the card
+    padding: $spacing-mobile;        
+    transition: transform 0.3s ease, box-shadow 0.3s ease; // transition for hover effect
+
+    &:hover {
+        transform: translateY(-5px);// Slightly lift the card on hover
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); // Increase shadow on hover
+    }
+
+    .image {
+        width: 100%;// Image takes full width of the card
+        height: auto; // Setting a fixed height for all movie images
+        overflow: hidden;// Hide overflowed parts of the image
+
+        img {
+            width: 100%;// Ensure image covers the full width
+            height: 100%;// Ensure image covers the full height
+            object-fit: cover;// Covers the entire area without stretching
+            transition: transform 0.3s ease; // transition for image hover effect
+        }
+
+        &:hover img {
+            transform: scale(1.05);// zoom-in effect on hover
+        }
+    }
+
+    .about {
+        padding: $spacing-mobile;
+
+        h2 {
+            font-family: $font-heading;   
+            font-size: 1.5rem;           
+            margin-bottom: $spacing-mobile; 
+            color: $yellow;             
+        }
+
+        p {
+            font-size: 0.9rem;           
+            margin-bottom: $spacing-mobile; 
+        }
+
+        .watch-now {
+            display: inline-block; // Displays the button inline
+            background-color: $teal;     
+            color: $dark-blue;           
+            padding: $spacing-mobile;     
+            font-size: 1rem;              
+            font-weight: bold;// Makes the button text bold
+            border: none;// Removes border from the button
+            border-radius: 4px; // Round corners of the button
+            cursor: pointer;// Change cursor to pointer on hover
+            transition: background-color 0.3s ease; //transition for hover effect
+
+            &:hover {
+                background-color: $yellow; // Changes button background on hover
+            }
+        }
+    }
+}
+
+// Specific Layout for Each Movie Card (adjusted for large screens)
+@media (min-width: 1024px) {
+    .movie:nth-of-type(1) {
+        grid-area: movie1;// Movie 1 spans the full width
+        height: 500px;// Sets a custom height for the first movie
+        .image {
+            height: 300px;// Adjusts the image height specifically for movie 1
+        }
+    }
+
+    .movie:nth-of-type(2) { grid-area: movie2; }
+    .movie:nth-of-type(3) { grid-area: movie3; }
+    .movie:nth-of-type(4) { grid-area: movie4; flex-direction: row; }
+    .movie:nth-of-type(5) { grid-area: movie5; flex-direction: row; } 
+    .movie:nth-of-type(6) { grid-area: movie6; flex-direction: row; } 
+}
