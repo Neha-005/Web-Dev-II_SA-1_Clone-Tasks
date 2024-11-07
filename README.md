@@ -32,15 +32,18 @@ Wireframes were followed to ensure layout, typography, and colour scheme consist
 
 **Task 2: Advance Layout**
 
-Project Description
+Project Description:-
+
 watch.it is a responsive website for a  made-up movie streaming platform. Designed for mobile, tablet, and desktop views, it displays movie cards in a grid layout, adhering to specified brand colours, fonts, and layout requirements.
 
-Technologies Used
+Technologies Used:-
+
 HTML5: Structure and content.
 CSS3 (SCSS): Styling and layout, including responsive design.
 Google Fonts: Teko and Lato font families.
 
-Target Devices
+Target Devices:-
+
 Mobile: 360px-720px
 Tablet: 720px-1024px
 Desktop: 1024px and up
