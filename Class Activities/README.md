@@ -1,4 +1,4 @@
-# Class Activites Tasks
+# Class Activities Tasks
 
 Task 1 
 [Movie Image Gallery](<Task 1_Image Gallery/index.html>)
@@ -14,7 +14,7 @@ Task 3
 Create a simple navigation bar using Flexbox. Include at least four links and style them to be horizontally aligned with even spacing.
 
 [Card Design:](<Task 3_Flex box/Card_Design.html>)
-Design a card component using Flexbox. The card should include an image, a title, a description, and a button. Ensure that the content is centered and responsive.
+Design a card component using Flexbox. The card should include an image, a title, a description, and a button. Ensure that the content is centred and responsive.
 
 [Image Gallery:](<Task 3_Flex box/Image Gallery.html>)
 Build a responsive image gallery using Flexbox. Arrange images in a row that wraps to a new line as the screen size decreases.
@@ -28,10 +28,10 @@ Create a simple to-do list application where the tasks are displayed using Flexb
 **Grid Layout**
 
 [Grid Layout:](<Task 3_Grid/Dashboard.html>)
-Create a two-column layout using CSS Grid. The left column should have a sidebar, and the right column should display main content. Include some placeholder text in each area.
+Create a two-column layout using CSS Grid. The left column should have a sidebar, and the right column should display the main content. Include some placeholder text in each area.
 
 [Responsive Photo Grid:](<Task 3_Grid/Photo_grid.html>)
-Design a responsive photo grid that adjusts the number of columns based on screen size. Use different sized images to demonstrate how the layout adapts.
+Design a responsive photo grid that adjusts the number of columns based on screen size. Use different-sized images to demonstrate how the layout adapts.
 
 [Dashboard Interface:](<Task 3_Grid/Dashboard.html>)
 Build a simple dashboard layout with a header, sidebar, and main content area using CSS Grid. Include widgets for statistics, recent activity, and notifications.
@@ -45,6 +45,7 @@ Design a quiz layout similar to the Flexbox quiz task, but this time use CSS Gri
 _________________________________________________________________________________________________________________________
 
 Task 4 
+
 Weston’s Chocolate Box
 You have been tasked to design a responsive website for the company, Weston’s Chocolate Box. You must scope the key features of the website (see below) and develop paper mock-ups for the website that take into account the RWD design principles discussed so far. The mock-up need only be for desktop/laptop systems and mobile devices in portrait mode.
 
