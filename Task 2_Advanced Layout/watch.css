@@ -179,7 +179,7 @@ header .search-container input[type=search] {
 @media (min-width: 1024px) {
   .movie:nth-of-type(1) {
     grid-area: movie1;
-    height: 500px;
+    height: 550px;
   }
   .movie:nth-of-type(1) .image {
     height: 300px;
