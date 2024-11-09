@@ -1,18 +1,18 @@
 // Colors 
-$dark-blue: #070410;// color for the body
-$white: #FFFFFF; // color for text
-$teal: #4DCCBD;// color for buttons and hover effects
-$purple: #231651;// color for the header and movie card backgrounds
-$yellow: #EEF36A;// color for emphasized text and hover effects
+$dark-blue: #070410;// colour for the body
+$white: #FFFFFF; // colour for text
+$teal: #4DCCBD;// colour for buttons and hover effects
+$purple: #231651;//colour for the header and movie card backgrounds
+$yellow: #EEF36A;// colour for emphasized text and hover effects
 
 // Fonts
-$font-heading: 'Teko', sans-serif;  // Heading font
-$font-body: 'Lato', sans-serif;     // Body text font
+$font-heading: 'Teko', sans-serif;// Heading font
+$font-body: 'Lato', sans-serif;// Body text font
 
 // Spacing values 
-$spacing-mobile: 16px;   // Mobile spacing 
-$spacing-tablet: 32px;   // Tablet spacing 
-$spacing-desktop: 48px;  // Desktop spacing 
+$spacing-mobile: 16px;// Mobile spacing 
+$spacing-tablet: 32px;// Tablet spacing 
+$spacing-desktop: 48px;// Desktop spacing 
 
 // A mixin to handle responsive breakpoints
 @mixin respond($breakpoint) {
@@ -30,7 +30,7 @@ $spacing-desktop: 48px;  // Desktop spacing
     }
 }
 
-// Font styling mixin to apply font family, size, and color easily
+// Font styling mixin to apply font family, size, and colour easily
 @mixin font-styling($family, $size, $color: $white) {
     font-family: $family; // Font family
     font-size: $size; // Font size
@@ -51,7 +51,7 @@ $spacing-desktop: 48px;  // Desktop spacing
 
 // Styling for the watch list page
 body {
-    background-color: $dark-blue; // background color
+    background-color: $dark-blue; // background colour
     @include font-styling($font-body, 1rem); // body font
     line-height: 1.6; // Spacing between lines
 }
@@ -76,12 +76,12 @@ header {
         gap: $spacing-desktop; // Space between navigation links
 
         a {
-            color: $white; // Link color
+            color: $white; // Link colour
             text-decoration: none; // Removes underline
             font-size: 1rem; // Font size for links
 
             &:hover {
-                color: $teal; // Change color on hover
+                color: $teal; // Change colour on hover
             }
         }
     }
@@ -135,7 +135,7 @@ header {
 
 // Main container styling
 .container {
-    max-width: 900px; // Limits max width for readability
+    max-width: 900px; // max width for readability
     margin: 0 auto; // Centers container horizontally
     padding: $spacing-desktop; // Desktop padding 
 
@@ -182,7 +182,7 @@ header {
 
 // Styling for each movie card
 .movie {
-    background-color: $purple; // Background color of each card
+    background-color: $purple; // Background colour of each card
     color: $white; // Text color in the card
     display: flex;
     flex-direction: column; // Stacking elements vertically
@@ -216,8 +216,8 @@ header {
 
         .watch-now {
             display: inline-block;
-            background-color: $teal; // Button color
-            color: $dark-blue; // Button text color
+            background-color: $teal; // Button colour
+            color: $dark-blue; // Button text colour
             padding: $spacing-mobile; // Padding inside button
             font-size: 1rem; // Button font size
             font-weight: bold; // Bold text for emphasis
@@ -231,11 +231,11 @@ header {
     }
 }
 
-// Custom layout adjustments for specific movie cards on desktop
+// Custom layout adjustments for specific movie cards on the desktop
 @include respond(desktop) {
     .movie:nth-of-type(1) {
         grid-area: movie1;
-        height: 500px;
+        height: 550px;
 
         .image { height: 300px; }
     }
