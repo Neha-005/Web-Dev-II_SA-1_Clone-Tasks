@@ -6,8 +6,9 @@
 
 body {
   background-color: #070410;
-  color: #FFFFFF;
   font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  color: #FFFFFF;
   line-height: 1.6;
 }
 
@@ -44,7 +45,7 @@ header .search-container input[type=search] {
   border-radius: 4px;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 720px) and (max-width: 1024px) {
   header {
     padding: 32px;
   }
@@ -83,7 +84,7 @@ header .search-container input[type=search] {
   margin: 0 auto;
   padding: 48px;
 }
-@media (max-width: 1024px) {
+@media (min-width: 720px) and (max-width: 1024px) {
   .container {
     padding: 32px;
   }
@@ -107,8 +108,8 @@ header .search-container input[type=search] {
 }
 @media (min-width: 1024px) {
   .movie-grid {
-    gap: 48px;
     grid-template-columns: 1fr 1fr;
+    gap: 48px;
     grid-template-areas: "movie1 movie1" "movie2 movie3" "movie4 movie4" "movie5 movie5" "movie6 movie6";
   }
 }
@@ -116,27 +117,22 @@ header .search-container input[type=search] {
 @media (max-width: 719px) {
   .movie-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
   }
 }
 .movie {
   background-color: #231651;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   color: #FFFFFF;
   display: flex;
   flex-direction: column;
   padding: 16px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 .movie:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
 }
 .movie .image {
   width: 100%;
   height: auto;
-  overflow: hidden;
 }
 .movie .image img {
   width: 100%;
@@ -145,8 +141,8 @@ header .search-container input[type=search] {
      object-fit: cover;
   transition: transform 0.3s ease;
 }
-.movie .image:hover img {
-  transform: scale(1.05);
+.movie .image img:hover {
+  transform: scale(1.03);
 }
 .movie .about {
   padding: 16px;
@@ -154,8 +150,8 @@ header .search-container input[type=search] {
 .movie .about h2 {
   font-family: "Teko", sans-serif;
   font-size: 1.5rem;
-  margin-bottom: 16px;
   color: #EEF36A;
+  margin-bottom: 16px;
 }
 .movie .about p {
   font-size: 0.9rem;
@@ -171,7 +167,10 @@ header .search-container input[type=search] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease;
+}
+.movie .about .watch-now:hover {
+  transform: scale(1.05);
 }
 .movie .about .watch-now:hover {
   background-color: #EEF36A;
