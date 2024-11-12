@@ -1,20 +1,20 @@
 // Colors 
-$dark-blue: #070410;// colour for the body
-$white: #FFFFFF; // colour for text
-$teal: #4DCCBD;// colour for buttons and hover effects
-$purple: #231651;//colour for the header and movie card backgrounds
-$yellow: #EEF36A;// colour for emphasized text and hover effects
+$dark-blue: #070410; // Colour for the body
+$white: #FFFFFF; // Colour for text
+$teal: #4DCCBD; // Colour for buttons and hover effects
+$purple: #231651; // Colour for the header and movie card backgrounds
+$yellow: #EEF36A; // Colour for emphasized text and hover effects
 
 // Fonts
-$font-heading: 'Teko', sans-serif;// Heading font
-$font-body: 'Lato', sans-serif;// Body text font
+$font-heading: 'Teko', sans-serif; // Heading font
+$font-body: 'Lato', sans-serif; // Body text font
 
 // Spacing values 
-$spacing-mobile: 16px;// Mobile spacing 
-$spacing-tablet: 32px;// Tablet spacing 
-$spacing-desktop: 48px;// Desktop spacing 
+$spacing-mobile: 16px; // Mobile spacing (small)
+$spacing-tablet: 32px; // Tablet spacing (large for main container)
+$spacing-desktop: 48px; // Desktop spacing (large for main container)
 
-// A mixin to handle responsive breakpoints
+// Mixin for responsive breakpoints
 @mixin respond($breakpoint) {
     // Mobile: max-width of 719px
     @if $breakpoint == mobile {
@@ -51,7 +51,7 @@ $spacing-desktop: 48px;// Desktop spacing
 
 // Styling for the watch list page
 body {
-    background-color: $dark-blue; // background colour
+    background-color: $dark-blue; // Background colour
     @include font-styling($font-body, 1rem); // body font
     line-height: 1.6; // Spacing between lines
 }
@@ -61,11 +61,12 @@ header {
     display: flex; // Layout side by side
     justify-content: space-between; // Space out items horizontally
     align-items: center; // Vertically center items
-    padding: $spacing-mobile; // Apply mobile padding 
+    padding: $spacing-mobile; // Apply small spacing for mobile
     background-color: $purple; // Set header background
 
     h1 {
-        @include font-styling($font-heading, 2rem); // Heading font and size for logo
+        @include font-styling($font-heading, 2em); // Mobile font size for logo
+        @include respond(tablet) { font-size: 3em; } // Increase for tablet and desktop
     }
 
     // Navigation styling
@@ -73,7 +74,7 @@ header {
         display: flex;
         flex: 1; // Fill available space
         justify-content: center; // Center items horizontally
-        gap: $spacing-desktop; // Space between navigation links
+        gap: $spacing-desktop; // Large spacing between navigation links
 
         a {
             color: $white; // Link colour
@@ -100,12 +101,8 @@ header {
     header {
         padding: $spacing-tablet; // Increase padding
 
-        h1 { font-size: 1.8rem; } // Adjusting font size for the logo
-
         nav {
-            gap: $spacing-tablet; // Adjusting space between links
-
-            a { font-size: 0.9rem; } // smaller font for links
+            gap: $spacing-tablet; // Adjust space between links
         }
     }
 }
@@ -115,17 +112,12 @@ header {
     header {
         padding: $spacing-mobile; // Using smaller padding
 
-        h1 { font-size: 1.6rem; } // Smaller font for logo
-
         nav {
             gap: $spacing-mobile; // Closer link spacing
             flex-direction: column; // Stack links vertically on mobile
             align-items: center;
-
-            a { font-size: 0.8rem; } // font size for links
         }
 
-        // Making search input smaller on mobile
         .search-container input[type="search"] {
             padding: 6px;
             font-size: 0.9rem;
@@ -137,7 +129,7 @@ header {
 .container {
     max-width: 900px; // max width for readability
     margin: 0 auto; // Centers container horizontally
-    padding: $spacing-desktop; // Desktop padding 
+    padding: $spacing-desktop; // Large spacing for desktop
 
     @include respond(tablet) { padding: $spacing-tablet; }
     @include respond(mobile) { padding: $spacing-mobile; }
@@ -217,13 +209,11 @@ header {
             display: inline-block;
             background-color: $teal; // Button colour
             color: $dark-blue; // Button text colour
-            padding: $spacing-mobile; // Padding inside button
-            font-size: 1rem; // Button font size
-            font-weight: bold; // Bold text for emphasis
+            padding:1rem 5rem; // Padding inside button
+            font-size: 2rem; // Button font size
             border: none;
             border-radius: 4px; // Rounded corners for button
             cursor: pointer; // Pointer cursor on hover
-            @include scale-hover(); // Hover effect
 
             &:hover { background-color: $yellow; } // colour changes while hovering
         }
