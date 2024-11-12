@@ -1,30 +1,27 @@
-// Colors 
-$dark-blue: #070410;// color for the body
+// Colors
+$dark-blue: #070410; // color for the body
 $white: #FFFFFF; // color for text
-$teal: #4DCCBD;// color for buttons and hover effects
-$purple: #231651;// color for the header and movie card backgrounds
-$yellow: #EEF36A;// color for emphasized text and hover effects
+$teal: #4DCCBD; // color for buttons and hover effects
+$purple: #231651; // color for the header and movie card backgrounds
+$yellow: #EEF36A; // color for emphasized text and hover effects
 
 // Fonts
 $font-heading: 'Teko', sans-serif;  // Heading font
 $font-body: 'Lato', sans-serif;     // Body text font
 
-// Spacing values 
-$spacing-mobile: 16px;   // Mobile spacing 
-$spacing-tablet: 32px;   // Tablet spacing 
-$spacing-desktop: 48px;  // Desktop spacing 
+// Spacing values
+$spacing-mobile: 16px;   // Mobile spacing
+$spacing-tablet: 32px;   // Tablet spacing
+$spacing-desktop: 48px;  // Desktop spacing
 
 // A mixin to handle responsive breakpoints
 @mixin respond($breakpoint) {
-    // Mobile: max-width of 719px
     @if $breakpoint == mobile {
         @media (max-width: 719px) { @content; }
     }
-    // Tablet: between 720px and 1024px
     @else if $breakpoint == tablet {
         @media (min-width: 720px) and (max-width: 1024px) { @content; }
     }
-    // Desktop: minimum width of 1024px
     @else if $breakpoint == desktop {
         @media (min-width: 1024px) { @content; }
     }
@@ -32,80 +29,76 @@ $spacing-desktop: 48px;  // Desktop spacing
 
 // Font styling mixin to apply font family, size, and color easily
 @mixin font-styling($family, $size, $color: $white) {
-    font-family: $family; // Font family
-    font-size: $size; // Font size
-    color: $color; // Text color 
+    font-family: $family;
+    font-size: $size;
+    color: $color;
 }
 
 // Mixin for hover effect that slightly enlarges elements when hovered
 @mixin scale-hover($scale: 1.05) {
-    transition: transform 0.3s ease; // Smooth scaling
-    &:hover { transform: scale($scale); } // Scale up on hover
+    transition: transform 0.3s ease;
+    &:hover { transform: scale($scale); }
 }
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 // Styling for the watch list page
 body {
-    background-color: $dark-blue; // background color
-    @include font-styling($font-body, 1rem); // body font
-    line-height: 1.6; // Spacing between lines
+    background-color: $dark-blue;
+    @include font-styling($font-body, 1rem);
+    line-height: 1.6;
 }
 
-// Header styling 
+// Header styling
 header {
-    display: flex; // Layout side by side
-    justify-content: space-between; // Space out items horizontally
-    align-items: center; // Vertically center items
-    padding: $spacing-mobile; // Apply mobile padding 
-    background-color: $purple; // Set header background
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing-mobile;
+    background-color: $purple;
 
     h1 {
-        @include font-styling($font-heading, 2rem); // Heading font and size for logo
+        @include font-styling($font-heading, 2rem);
     }
 
-    // Navigation styling
     nav {
         display: flex;
-        flex: 1; // Fill available space
-        justify-content: center; // Center items horizontally
-        gap: $spacing-desktop; // Space between navigation links
+        justify-content: center;
+        gap: $spacing-desktop;
 
         a {
-            color: $white; // Link color
-            text-decoration: none; // Removes underline
-            font-size: 1rem; // Font size for links
+            color: $white;
+            text-decoration: none;
+            font-size: 1rem;
 
             &:hover {
-                color: $teal; // Change color on hover
+                color: $teal;
             }
         }
     }
 
-    // Search input field inside the header
     .search-container input[type="search"] {
-        padding: 8px; // Space inside the input
-        font-size: 1rem; // Font size for search text
-        border: none; // Removes border
-        border-radius: 4px; // Rounded corners
+        padding: 8px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 4px;
     }
 }
 
-// Responsive adjustments for header on tablet view
+// Responsive adjustments for tablet view
 @include respond(tablet) {
     header {
-        padding: $spacing-tablet; // Increase padding
+        padding: $spacing-tablet;
 
-        h1 { font-size: 1.8rem; } // Adjusting font size for the logo
+        h1 { font-size: 1.8rem; }
 
         nav {
-            gap: $spacing-tablet; // Adjusting space between links
-
-            a { font-size: 0.9rem; } // smaller font for links
+            gap: $spacing-tablet;
+            a { font-size: 0.9rem; }
         }
     }
 }
@@ -113,19 +106,18 @@ header {
 // Responsive header styling for mobile view
 @include respond(mobile) {
     header {
-        padding: $spacing-mobile; // Using smaller padding
+        padding: $spacing-mobile;
 
-        h1 { font-size: 1.6rem; } // Smaller font for logo
+        h1 { font-size: 2rem; }
 
         nav {
-            gap: $spacing-mobile; // Closer link spacing
-            flex-direction: column; // Stack links vertically on mobile
+            flex-direction: column;
             align-items: center;
+            gap: $spacing-mobile;
 
-            a { font-size: 0.8rem; } // font size for links
+            a { font-size: 0.8rem; }
         }
 
-        // Making search input smaller on mobile
         .search-container input[type="search"] {
             padding: 6px;
             font-size: 0.9rem;
@@ -135,9 +127,9 @@ header {
 
 // Main container styling
 .container {
-    max-width: 900px; // Limits max width for readability
-    margin: 0 auto; // Centers container horizontally
-    padding: $spacing-desktop; // Desktop padding 
+    max-width: 900px;
+    margin: 0 auto;
+    padding: $spacing-desktop;
 
     @include respond(tablet) { padding: $spacing-tablet; }
     @include respond(mobile) { padding: $spacing-mobile; }
@@ -145,10 +137,8 @@ header {
 
 // Layout for the movie grid section
 .movie-grid {
-    display: grid; // Grid layout 
-    gap: $spacing-mobile; // gap between grid items
-
-    // grid structure (one column)
+    display: grid;
+    gap: $spacing-mobile;
     grid-template-areas:
         "movie1"
         "movie2 movie3"
@@ -156,16 +146,14 @@ header {
         "movie5"
         "movie6";
 
-    // Adjusting grid layout 
     @include respond(tablet) {
-        grid-template-columns: 1fr 1fr; // Two columns for tablet
-        gap: $spacing-tablet; // Increase gap
+        grid-template-columns: 1fr 1fr;
+        gap: $spacing-tablet;
     }
 
-    // Grid layout 
     @include respond(desktop) {
-        grid-template-columns: 1fr 1fr; // Two columns on desktop
-        gap: $spacing-desktop; // Desktop gap
+        grid-template-columns: 1fr 1fr;
+        gap: $spacing-desktop;
         grid-template-areas:
             "movie1 movie1"
             "movie2 movie3"
@@ -177,56 +165,59 @@ header {
 
 // Mobile-specific adjustments
 @include respond(mobile) {
-    .movie-grid { grid-template-columns: 1fr; } // Single column for mobile
+    .movie-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 // Styling for each movie card
 .movie {
-    background-color: $purple; // Background color of each card
-    color: $white; // Text color in the card
+    background-color: $purple;
+    color: $white;
     display: flex;
-    flex-direction: column; // Stacking elements vertically
-    padding: $spacing-mobile; 
-    @include scale-hover(); // Appling hover effect
+    flex-direction: column;
+    padding: $spacing-mobile;
+    @include scale-hover();
 
     .image {
-        width: 100%; // Full-width for the image
+        width: 100%;
         height: auto;
 
         img {
-            width: 100%; // Make image responsive
+            width: 100%;
             height: 100%;
-            object-fit: cover; // Covering the whole image area
-            @include scale-hover(1.03); // zoom effect on hover
+            object-fit: cover;
         }
     }
 
     .about {
-        padding: $spacing-mobile; // Padding around text
+        padding: $spacing-mobile;
 
         h2 {
-            @include font-styling($font-heading, 1.5rem, $yellow); // Title styling
-            margin-bottom: $spacing-mobile; // Space below title
+            @include font-styling($font-heading, 1.5rem, $yellow);
+            margin-bottom: $spacing-mobile;
         }
 
         p {
-            font-size: 0.9rem; // Font size for description
-            margin-bottom: $spacing-mobile; // Space below paragraph
+            font-size: 0.9rem;
+            margin-bottom: $spacing-mobile;
         }
 
         .watch-now {
             display: inline-block;
-            background-color: $teal; // Button color
-            color: $dark-blue; // Button text color
-            padding: $spacing-mobile; // Padding inside button
-            font-size: 1rem; // Button font size
-            font-weight: bold; // Bold text for emphasis
+            background-color: $teal;
+            color: $dark-blue;
+            padding: 0.75rem 2rem;
+            font-size: 2rem;
+            font-weight: bold;
             border: none;
-            border-radius: 4px; // Rounded corners for button
-            cursor: pointer; // Pointer cursor on hover
-            @include scale-hover(); // Hover effect
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
 
-            &:hover { background-color: $yellow; } // colour changes while hovering
+            &:hover {
+                background-color: $yellow;
+            }
         }
     }
 }
@@ -235,7 +226,7 @@ header {
 @include respond(desktop) {
     .movie:nth-of-type(1) {
         grid-area: movie1;
-        height: 500px;
+        height: 550px;
 
         .image { height: 300px; }
     }
