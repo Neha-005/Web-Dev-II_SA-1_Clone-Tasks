@@ -1,0 +1,30 @@
+@import 'othersection';
+
+@mixin theme($t:yellow){
+    background-color: $t;
+    width:50%;
+    height: 50%;
+    text-align:center;
+    border: 1px;
+}
+
+$bgcolor: pink;
+$textcolor: blue;
+
+.cont{
+
+    ul{
+        li{
+            background-color: $bgcolor;
+            color: $textcolor;
+        }
+    }
+}
+
+.c1{
+    @include theme;
+}
+
+.c2{
+    @include theme($t: purple);
+}
