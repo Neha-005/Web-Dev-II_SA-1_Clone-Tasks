@@ -62,3 +62,7 @@ A way for a user to select an ‘occasion’ and begin building from there
 [Build your box page](<Task 4_Website/customize.html>)
 [Sign in / Sign up page](<Task 4_Website/sign.html>)
 _______________________________________________________________________________________________________________________
+
+Class Activities 
+Introduction to SASS 
+Nested and mixins 
